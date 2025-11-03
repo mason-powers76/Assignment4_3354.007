@@ -13,166 +13,166 @@ import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
 import stackproject.Stack;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
+@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true)
 public class Stack_ESTest extends Stack_ESTest_scaffolding {
 
-  @Test(timeout = 4000)
-  public void test00()  throws Throwable  {
-      Stack stack0 = new Stack(845);
-      stack0.push(845);
-      int int0 = stack0.size();
-      assertEquals(1, int0);
-  }
+    @Test(timeout = 4000)
+    public void test00()  throws Throwable  {
+        Stack stack0 = new Stack(845);
+        stack0.push(845);
+        int int0 = stack0.size();
+        assertEquals(1, int0);
+    }
 
-  @Test(timeout = 4000)
-  public void test01()  throws Throwable  {
-      Stack stack0 = new Stack(7378);
-      stack0.push(0);
-      int int0 = stack0.pop();
-      assertEquals(0, stack0.size());
-      assertEquals(0, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test02()  throws Throwable  {
-      Stack stack0 = new Stack(845);
-      stack0.push(0);
-      stack0.push(845);
-      stack0.pop();
-      int int0 = stack0.peek();
-      assertEquals(1, stack0.size());
-      assertEquals(0, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test03()  throws Throwable  {
-      Stack stack0 = new Stack(296);
-      stack0.push((-623));
-      stack0.push(296);
-      stack0.pop();
-      int int0 = stack0.peek();
-      assertEquals(1, stack0.size());
-      assertEquals((-623), int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test04()  throws Throwable  {
-      Stack stack0 = null;
-      try {
-        stack0 = new Stack((-206));
-        fail("Expecting exception: NegativeArraySizeException");
-      
-      } catch(NegativeArraySizeException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("Stack", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test05()  throws Throwable  {
-      Stack stack0 = new Stack(845);
-      stack0.push(845);
-      boolean boolean0 = stack0.isEmpty();
-      assertEquals(1, stack0.size());
-      assertFalse(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test06()  throws Throwable  {
-      Stack stack0 = new Stack(845);
-      stack0.push(845);
-      int int0 = stack0.peek();
-      assertEquals(1, stack0.size());
-      assertEquals(845, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test07()  throws Throwable  {
-      Stack stack0 = new Stack(845);
-      int int0 = stack0.size();
-      assertEquals(0, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test08()  throws Throwable  {
-      Stack stack0 = new Stack(0);
-      boolean boolean0 = stack0.isFull();
-      assertTrue(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test09()  throws Throwable  {
-      Stack stack0 = new Stack(845);
-      boolean boolean0 = stack0.isFull();
-      assertFalse(boolean0);
-      assertTrue(stack0.isEmpty());
-  }
-
-  @Test(timeout = 4000)
-  public void test10()  throws Throwable  {
-      Stack stack0 = new Stack(3477);
-      boolean boolean0 = stack0.isEmpty();
-      assertTrue(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test11()  throws Throwable  {
-      Stack stack0 = new Stack(296);
-      stack0.push((-623));
-      stack0.push(296);
-      stack0.pop();
-      stack0.pop();
-      // Undeclared exception!
-      try { 
-        stack0.peek();
-        fail("Expecting exception: IllegalStateException");
-      
-      } catch(IllegalStateException e) {
-         //
-         // Stack is empty
-         //
-         verifyException("Stack", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test12()  throws Throwable  {
-      Stack stack0 = new Stack(174);
-      // Undeclared exception!
-      try { 
-        stack0.pop();
-        fail("Expecting exception: IllegalStateException");
-      
-      } catch(IllegalStateException e) {
-         //
-         // Stack is empty
-         //
-         verifyException("Stack", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test13()  throws Throwable  {
-      Stack stack0 = new Stack(0);
-      // Undeclared exception!
-      try { 
+    @Test(timeout = 4000)
+    public void test01()  throws Throwable  {
+        Stack stack0 = new Stack(7378);
         stack0.push(0);
-        fail("Expecting exception: IllegalStateException");
-      
-      } catch(IllegalStateException e) {
-         //
-         // Stack is full
-         //
-         verifyException("Stack", e);
-      }
-  }
+        int int0 = stack0.pop();
+        assertEquals(0, stack0.size());
+        assertEquals(0, int0);
+    }
 
-  @Test(timeout = 4000)
-  public void test14()  throws Throwable  {
-      String[] stringArray0 = new String[2];
-      Stack.main(stringArray0);
-      assertEquals(2, stringArray0.length);
-  }
+    @Test(timeout = 4000)
+    public void test02()  throws Throwable  {
+        Stack stack0 = new Stack(845);
+        stack0.push(0);
+        stack0.push(845);
+        stack0.pop();
+        int int0 = stack0.peek();
+        assertEquals(1, stack0.size());
+        assertEquals(0, int0);
+    }
+
+    @Test(timeout = 4000)
+    public void test03()  throws Throwable  {
+        Stack stack0 = new Stack(296);
+        stack0.push((-623));
+        stack0.push(296);
+        stack0.pop();
+        int int0 = stack0.peek();
+        assertEquals(1, stack0.size());
+        assertEquals((-623), int0);
+    }
+
+    @Test(timeout = 4000)
+    public void test04()  throws Throwable  {
+        Stack stack0 = null;
+        try {
+            stack0 = new Stack((-206));
+            fail("Expecting exception: NegativeArraySizeException");
+
+        } catch(NegativeArraySizeException e) {
+            //
+            // no message in exception (getMessage() returned null)
+            //
+            verifyException("stackproject.Stack", e);
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test05()  throws Throwable  {
+        Stack stack0 = new Stack(845);
+        stack0.push(845);
+        boolean boolean0 = stack0.isEmpty();
+        assertEquals(1, stack0.size());
+        assertFalse(boolean0);
+    }
+
+    @Test(timeout = 4000)
+    public void test06()  throws Throwable  {
+        Stack stack0 = new Stack(845);
+        stack0.push(845);
+        int int0 = stack0.peek();
+        assertEquals(1, stack0.size());
+        assertEquals(845, int0);
+    }
+
+    @Test(timeout = 4000)
+    public void test07()  throws Throwable  {
+        Stack stack0 = new Stack(845);
+        int int0 = stack0.size();
+        assertEquals(0, int0);
+    }
+
+    @Test(timeout = 4000)
+    public void test08()  throws Throwable  {
+        Stack stack0 = new Stack(0);
+        boolean boolean0 = stack0.isFull();
+        assertTrue(boolean0);
+    }
+
+    @Test(timeout = 4000)
+    public void test09()  throws Throwable  {
+        Stack stack0 = new Stack(845);
+        boolean boolean0 = stack0.isFull();
+        assertFalse(boolean0);
+        assertTrue(stack0.isEmpty());
+    }
+
+    @Test(timeout = 4000)
+    public void test10()  throws Throwable  {
+        Stack stack0 = new Stack(3477);
+        boolean boolean0 = stack0.isEmpty();
+        assertTrue(boolean0);
+    }
+
+    @Test(timeout = 4000)
+    public void test11()  throws Throwable  {
+        Stack stack0 = new Stack(296);
+        stack0.push((-623));
+        stack0.push(296);
+        stack0.pop();
+        stack0.pop();
+        // Undeclared exception!
+        try {
+            stack0.peek();
+            fail("Expecting exception: IllegalStateException");
+
+        } catch(IllegalStateException e) {
+            //
+            // Stack is empty
+            //
+            verifyException("stackproject.Stack", e);
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test12()  throws Throwable  {
+        Stack stack0 = new Stack(174);
+        // Undeclared exception!
+        try {
+            stack0.pop();
+            fail("Expecting exception: IllegalStateException");
+
+        } catch(IllegalStateException e) {
+            //
+            // Stack is empty
+            //
+            verifyException("stackproject.Stack", e);
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test13()  throws Throwable  {
+        Stack stack0 = new Stack(0);
+        // Undeclared exception!
+        try {
+            stack0.push(0);
+            fail("Expecting exception: IllegalStateException");
+
+        } catch(IllegalStateException e) {
+            //
+            // Stack is full
+            //
+            verifyException("stackproject.Stack", e);
+        }
+    }
+
+    @Test(timeout = 4000)
+    public void test14()  throws Throwable  {
+        String[] stringArray0 = new String[2];
+        Stack.main(stringArray0);
+        assertEquals(2, stringArray0.length);
+    }
 }
